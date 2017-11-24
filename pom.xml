@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.elixir.mvn</groupId>
+  <artifactId>maven-master</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Maven Master </name>
+  <description>Mastering on Maven</description>
+  
+  <properties>
+  </properties>
+  
+  <repositories>
+    <repository>
+     <id>central</id>
+     <name>Maven Repository Switchboard</name>
+	<layout>default</layout>
+	<url>http://repo1.maven.org/maven2</url>
+	<snapshots>
+		<enabled>false</enabled>
+	</snapshots>
+	
+    </repository>
+  
+  </repositories>
+  
+  <pluginRepositories>
+	  <pluginRepository>
+		<id>central</id> 
+		<name>Maven Plugin Repository</name>
+		<url>http://repo1.maven.org/maven2</url>
+		<layout>default</layout>
+		<snapshots>
+		<enabled>false</enabled>
+		</snapshots>
+		<releases>
+		<updatePolicy>never</updatePolicy>
+		</releases>
+	  </pluginRepository>
+  </pluginRepositories>
+  
+  <dependencyManagement>
+   <dependencies>
+   
+   </dependencies>
+  
+  </dependencyManagement>
+  
+  <build>
+  	  <directory>${project.basedir}/target</directory>
+      <finalName>${project.artifactId}-${project.version}</finalName>
+  
+  </build>
+  
+  
+</project>
